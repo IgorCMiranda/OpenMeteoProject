@@ -78,17 +78,17 @@ About Postgres
  ## Tables:
    * Master:
             
-            ```bash
+        ```bash
             CREATE TABLE Master (
                 id SERIAL PRIMARY KEY,
                 latitude FLOAT NOT NULL,
                 longitude FLOAT NOT NULL
 	          );
-            ```
+        ```
            
    * Detailed:
             
-            ```bash
+        ```bash
             CREATE TABLE Detailed (
                 id SERIAL PRIMARY KEY,
                 temperature FLOAT NOT NULL,
@@ -99,6 +99,4 @@ About Postgres
                 id_master INTEGER NOT NULL,
                 FOREIGN KEY (id_master) REFERENCES Master (id)
             );
-            ```
-            
-
+        ```
