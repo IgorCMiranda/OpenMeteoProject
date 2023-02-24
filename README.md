@@ -47,3 +47,54 @@ ________________________________________________________________________________
 * Source Code - src/main/java/OpenMeteoAPI.java
 
 * JUnit Tests - src/test/java/OpenMeteoAPITest.java
+
+______________________________________________________________________________________________________________________________________
+
+About Postgres
+
+1 - The Postgres was setted up with this infos:
+    user: postgres
+    password: 1234
+    
+2 - The port used was the standard 5432
+
+3 - Database created:
+    name: OpenMeteo
+    
+    ```bash
+    CREATE DATABASE "OpenMeteo"
+    WITH
+    OWNER = postgres
+    ENCODING = 'UTF8'
+    LC_COLLATE = 'C'
+    LC_CTYPE = 'C'
+    TABLESPACE = pg_default
+    CONNECTION LIMIT = -1
+    IS_TEMPLATE = False;
+    ```
+    
+    Tables:
+            Master:
+            ```bash
+            CREATE TABLE Master (
+                id SERIAL PRIMARY KEY,
+                latitude FLOAT NOT NULL,
+                longitude FLOAT NOT NULL
+	          );
+            ```
+            
+            Detailed:
+            ```bash
+            CREATE TABLE Detailed (
+                id SERIAL PRIMARY KEY,
+                temperature FLOAT NOT NULL,
+                wind_speed FLOAT NOT NULL,
+                wind_direction FLOAT NOT NULL,
+                time_utc TIMESTAMP NOT NULL,
+                local_time TIMESTAMP NOT NULL,
+                id_master INTEGER NOT NULL,
+                FOREIGN KEY (id_master) REFERENCES Master (id)
+            );
+            ```
+            
+
