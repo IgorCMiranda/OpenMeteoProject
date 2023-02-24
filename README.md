@@ -1,6 +1,6 @@
 # OpenMeteoProject
 
-:page_facing_up: Instructions:
+:arrow_right:  :page_facing_up: Instructions:  :arrow_left:
 
 The project was built using Maven and the IntelliJ IDE. If the test is done on the same, it is possible
 follow the following steps:
@@ -26,7 +26,7 @@ If IntelliJ does not automatically detect the Maven project, you can select "Imp
 
 ______________________________________________________________________________________________________________________________________
 
-:hammer_and_wrench: Test WAR File
+:arrow_right:  :hammer_and_wrench: Test WAR File  :arrow_left:
 
 To test a WAR file, you need to deploy it to an application server, like Tomcat or Jetty.
 
@@ -42,7 +42,7 @@ Here are the general steps for testing a WAR file:
 
 ______________________________________________________________________________________________________________________________________
 
-:gear: Infos
+:arrow_right:  :gear: Infos  :arrow_left:
 
 * Source Code - src/main/java/OpenMeteoAPI.java
 
