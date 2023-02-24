@@ -56,10 +56,12 @@ About Postgres
     user: postgres
     password: 1234
     
-2 - The port used was the standard 5432
+2 - The port used was the standard 
+    5432
 
 3 - Database created:
-    name: OpenMeteo
+
+--> name: OpenMeteo <--
     
 ```bash
     CREATE DATABASE "OpenMeteo"
@@ -73,8 +75,9 @@ About Postgres
     IS_TEMPLATE = False;
 ```
     
- Tables:
-   Master:
+ ## Tables:
+   * Master:
+            
             ```bash
             CREATE TABLE Master (
                 id SERIAL PRIMARY KEY,
@@ -83,7 +86,8 @@ About Postgres
 	          );
             ```
            
-   Detailed:
+   * Detailed:
+            
             ```bash
             CREATE TABLE Detailed (
                 id SERIAL PRIMARY KEY,
