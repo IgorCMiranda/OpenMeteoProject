@@ -61,7 +61,7 @@ About Postgres
 3 - Database created:
     name: OpenMeteo
     
-    ```bash
+```bash
     CREATE DATABASE "OpenMeteo"
     WITH
     OWNER = postgres
@@ -71,10 +71,10 @@ About Postgres
     TABLESPACE = pg_default
     CONNECTION LIMIT = -1
     IS_TEMPLATE = False;
-    ```
+```
     
-    Tables:
-            Master:
+ Tables:
+   Master:
             ```bash
             CREATE TABLE Master (
                 id SERIAL PRIMARY KEY,
@@ -82,8 +82,8 @@ About Postgres
                 longitude FLOAT NOT NULL
 	          );
             ```
-            
-            Detailed:
+           
+   Detailed:
             ```bash
             CREATE TABLE Detailed (
                 id SERIAL PRIMARY KEY,
